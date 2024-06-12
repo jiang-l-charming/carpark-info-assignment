@@ -1,0 +1,26 @@
+{
+  "name": "carpark-info-assignment",
+  "version": "1.0.0",
+  "description": "A take-home coding assignment for backend developer interview.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiang-l-charming/carpark-info-assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiang-l-charming/carpark-info-assignment/issues"
+  },
+  "homepage": "https://github.com/jiang-l-charming/carpark-info-assignment#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

@@ -1,0 +1,57 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Carpark API",
+        "version": "1.0.0",
+        "title": "Carpark API"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "paths": {
+        "/carparks": {
+            "get": {
+                "summary": "Filter carparks",
+                "parameters": [
+                    {
+                        "name": "freeParking",
+                        "in": "query",
+                        "type": "string"
+                    },
+                    {
+                        "name": "nightParking",
+                        "in": "query",
+                        "type": "string"
+                    },
+                    {
+                        "name": "gantryHeight",
+                        "in": "query",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Filtered carparks"
+                    }
+                }
+            }
+        },
+        "/favorites/{carParkNo}": {
+            "post": {
+                "summary": "Add carpark to favorites",
+                "parameters": [
+                    {
+                        "name": "carParkNo",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Carpark added to favorites"
+                    }
+                }
+            }
+        }
+    }
+}
