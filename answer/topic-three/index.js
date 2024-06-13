@@ -43,11 +43,11 @@ app.get("/carparks", (req, res) => {
 // 添加停车场到收藏夹的端点
 app.post("/favorites/:carParkNo", (req, res) => {
   const { carParkNo } = req.params;
-  const user = req.user; // 假设从身份验证中间件获取用户信息
-
+  const userId = "JiangKj"; // 此处写死用户id，实际开发中应该由接口调用方法传递用户id参数过来
+  
   // 插入收藏夹数据
   const sql = "INSERT INTO favorites (user_id, car_park_no) VALUES (?, ?)";
-  db.run(sql, [user.id, carParkNo], function (err) {
+  db.run(sql, [userId, carParkNo], function (err) {
     if (err) return res.status(500).send(err);
     res.sendStatus(201);
   });
